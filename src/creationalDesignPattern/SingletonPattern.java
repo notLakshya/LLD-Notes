@@ -1,3 +1,5 @@
+package creationalDesignPattern;
+
 public class SingletonPattern {
     private static SingletonPattern instance;
 

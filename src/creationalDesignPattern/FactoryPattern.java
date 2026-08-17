@@ -1,3 +1,5 @@
+package creationalDesignPattern;
+
 public class FactoryPattern {
     interface Shape {
         void draw();

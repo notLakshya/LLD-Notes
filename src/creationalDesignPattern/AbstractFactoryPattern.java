@@ -1,3 +1,5 @@
+package creationalDesignPattern;
+
 interface PaymentGateway {
     void pay();
 }
@@ -8,7 +10,7 @@ class Paypal implements PaymentGateway {
 }
 class PayU implements PaymentGateway {
     public void pay() {
-        System.out.println("Paying via PayU");
+        System.out.println("Paying via creationalDesignPattern.PayU");
     }
 }
 interface Innvoice {
@@ -69,13 +71,13 @@ public class AbstractFactoryPattern {
     public static void main(String[] args) {
         PaymentService paymentService = new PaymentService(
                 new IndiaFactory(),
-                "PayU",
+                "creationalDesignPattern.PayU",
                 "GST"
         );
         paymentService.checkout();
         PaymentService paymentServiceUS = new PaymentService(
                 new USFactory(),
-                "Paypal",
+                "creationalDesignPattern.Paypal",
                 "UST"
         );
         paymentServiceUS.checkout();
